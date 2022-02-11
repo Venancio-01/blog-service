@@ -1,7 +1,7 @@
 /*
  * @Author: liqingshan
  * @Date: 2022-02-11 13:38:12
- * @LastEditTime: 2022-02-11 14:22:36
+ * @LastEditTime: 2022-02-11 18:07:38
  * @LastEditors: liqingshan
  * @FilePath: \blog-service\src\posts\posts.service.ts
  * @Description:
@@ -47,7 +47,7 @@ export class PostsService {
     qb.offset(pageSize * (pageNum - 1));
 
     const posts = await qb.getMany();
-    return { list: posts, count: count };
+    return { list: posts, count };
   }
 
   // 获取指定文章
